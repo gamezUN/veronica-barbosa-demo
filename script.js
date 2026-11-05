@@ -25,26 +25,40 @@ function showToast(message) {
 
 function showPublicView() {
   document.body.classList.remove("crm-mode");
-  crmView.hidden = true;
-  publicView.hidden = false;
-  publicFooter.hidden = false;
+  crmView.setAttribute("hidden", "");
+  publicView.removeAttribute("hidden");
+  publicFooter.removeAttribute("hidden");
   mainNav.classList.remove("open");
   menuToggle.setAttribute("aria-expanded", "false");
+  history.replaceState(null, "", window.location.pathname + window.location.search);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function showCrmView() {
   document.body.classList.add("crm-mode");
-  publicView.hidden = true;
-  publicFooter.hidden = true;
-  crmView.hidden = false;
+  publicView.setAttribute("hidden", "");
+  publicFooter.setAttribute("hidden", "");
+  crmView.removeAttribute("hidden");
   mainNav.classList.remove("open");
   menuToggle.setAttribute("aria-expanded", "false");
+  history.replaceState(null, "", "#crm");
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-openCrm.addEventListener("click", showCrmView);
-backToSite.addEventListener("click", showPublicView);
+// Delegación de eventos para que los controles sigan funcionando aunque
+// el navegador restaure la página desde caché o se navegue por el historial.
+document.addEventListener("click", (event) => {
+  if (event.target.closest("#openCrm")) {
+    event.preventDefault();
+    showCrmView();
+  }
+  if (event.target.closest("#backToSite")) {
+    event.preventDefault();
+    showPublicView();
+  }
+});
+
+if (window.location.hash === "#crm") showCrmView();
 brandHome.addEventListener("click", (event) => {
   if (!crmView.hidden) {
     event.preventDefault();
