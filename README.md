@@ -1,14 +1,20 @@
 # Verónica Barbosa — demostración web
 
-Propuesta visual de una página informativa para presentar servicios de orientación a pensionados y jubilados, junto con una vista conceptual de CRM.
+Propuesta visual con dos vistas: página comercial pública y panel conceptual de CRM.
 
-## Archivos
-- `index.html`: estructura y contenido en español.
-- `styles.css`: identidad visual, diseño adaptable y animaciones.
-- `script.js`: menú móvil, selección de perfil, validación de formulario y animaciones al desplazarse.
+## Estructura
+- `index.html`: página pública, formulario ilustrativo, selector modal de PDF y dashboard CRM.
+- `styles.css`: identidad visual, diseño responsive, ventana de selección y estilos del CRM.
+- `script.js`: navegación entre vistas, validación del selector PDF y efectos de interfaz.
 
-## Cómo visualizar
-Abre `index.html` en un navegador o activa GitHub Pages desde **Settings → Pages**, seleccionando la rama `main` y la carpeta `/ (root)`.
+## Cómo probar
+Abre `index.html` en un navegador. En el encabezado selecciona **Vista CRM** para abrir el panel conceptual; usa **Volver al sitio** para regresar.
 
-## Importante
-Este repositorio contiene únicamente una demostración. El formulario no envía ni guarda información, el panel CRM utiliza cifras y contactos ficticios y no existe conexión a una base de datos. Antes de publicar una versión real se deben confirmar la identidad y autorización de la persona o entidad que ofrece el servicio, las condiciones financieras, los requisitos y el aviso de privacidad. No ingresar datos personales reales en esta demo.
+## Alcance de esta demostración
+- El selector permite elegir archivos PDF y muestra el nombre del archivo seleccionado.
+- El PDF no se transmite ni se guarda en un servidor.
+- Los formularios no envían ni almacenan datos.
+- El panel CRM muestra métricas, gráficas, prospectos, mensajes, documentos y reportes de ejemplo.
+- Los datos y registros mostrados son ficticios. No hay base de datos ni conexión con WhatsApp o correo.
+
+Las secciones, indicadores, etapas y funciones del CRM son una propuesta adaptable a las necesidades reales del negocio. Antes de una implementación real deberán definirse el flujo de trabajo, los permisos, el almacenamiento seguro y el aviso de privacidad.
