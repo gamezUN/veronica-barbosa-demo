@@ -7,3 +7,6 @@ body.crm-mode{background:#f5f7f5}.crm-shell{min-height:calc(100vh - 110px);displ
 @media(max-width:700px){.main-nav{gap:13px}.crm-nav-button{width:100%}.crm-shell{grid-template-columns:1fr}.crm-sidebar{min-height:auto;padding:14px 17px;display:block}.crm-side-brand{padding:0}.crm-sidebar .side-caption,.crm-sidebar .side-link,.sidebar-bottom{display:none}.crm-main{padding:20px 14px 28px}.crm-topbar{align-items:flex-start;gap:10px}.crm-topbar h1{font-size:1.4rem}.crm-top-actions{align-items:flex-end;flex-direction:column;gap:7px}.crm-top-actions .demo-tag{font-size:.52rem}.crm-welcome{padding:22px 20px}.crm-welcome h2{font-size:1.45rem}.crm-welcome p{max-width:250px;font-size:.68rem}.welcome-mark{font-size:3.6rem;margin-right:0}.crm-metrics{gap:8px}.crm-metric{padding:12px}.crm-metric>div>span{font-size:.61rem}.crm-metric>strong{font-size:1.6rem}.crm-card{padding:15px 12px}.crm-table th,.crm-table td{padding:9px 5px;font-size:.57rem}.crm-table .status{font-size:.5rem;padding:3px 5px}.upload-dialog{padding:32px 22px 23px}.document-upload{align-items:flex-start}.upload-trigger{width:100%}}
 
 body.crm-mode .site-header .public-link,body.crm-mode .site-header .crm-nav-button{display:none}body.crm-mode .site-header .main-nav{display:flex}
+
+/* Garantiza que las vistas ocultas no se muestren por reglas de layout. */
+[hidden]{display:none!important}
